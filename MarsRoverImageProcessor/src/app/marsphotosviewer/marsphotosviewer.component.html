@@ -1,0 +1,7 @@
+<input [(ngModel)]="earthDate" type="date" id="startDate" class="form-control" placeholder="Start date">  
+<button (click)="getPhotos()">Get Photos</button>
+<ng-container *ngIf="imagedetails">
+  <div *ngFor="let photo of imagedetails.photos;">
+    <img  [src]="photo.img_Src" style="width:100px;height:100px;" alt={{photo.img_Src}} />                                                                                                                                              
+  </div>
+</ng-container>                                                                                                                                                                                                                                                                                                   
