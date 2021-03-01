@@ -1,8 +1,12 @@
 # MarsRoverPhotoViewer
 
 This Repo consists of 
-1. .net core API which talks to the https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
+1. MarsRoverImageApi: .net core API(3.1) which talks to the https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
 and get the imagedetails
+
+2. This API accepts earthdate as input and gets the details for the date
+Url:
+http://localhost:5000/api/MarsRoverImage/GetImage?date=2015-6-3
 
 Sample Response:
 {
@@ -30,4 +34,8 @@ Sample Response:
     ]
 }
 
-2. Angular UI application talks to the .netcore API and populate the UI
+
+2. MarsRoverImageProcessor - Angular UI application talks to the .MarsRoverImageApi and populate photos from Maes
+
+![image](https://user-images.githubusercontent.com/11185598/109544801-00152180-7a96-11eb-97e3-b4ce9e59e479.png)
+
